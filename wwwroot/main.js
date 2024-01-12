@@ -12,7 +12,8 @@ const {setModuleImports, getAssemblyExports, getConfig} = await dotnet
 setModuleImports('main.js', {
     util: {
         fun: (val) => val + 1,
-        getPerson: (name, age, isChild) => new Person(name, age, isChild)
+        getPerson: (name, age, isChild) => new Person(name, age, isChild),
+        getPerson2: (name, age, isChild) => new Person(name, age, isChild)
     }
 });
 
