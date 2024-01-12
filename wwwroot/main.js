@@ -2,6 +2,7 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 
 import {dotnet} from './_framework/dotnet.js'
+import {Person} from "./person.js"
 
 const {setModuleImports, getAssemblyExports, getConfig} = await dotnet
     .withDiagnosticTracing(false)
@@ -9,24 +10,15 @@ const {setModuleImports, getAssemblyExports, getConfig} = await dotnet
     .create();
 
 setModuleImports('main.js', {
-    window: {
-        location: {
-            href: () => globalThis.window.location.href
-        }
-    },
     util: {
-        fun: (val) => val + 1
+        fun: (val) => val + 1,
+        getPerson: (name, age, isChild) => new Person(name, age, isChild)
     }
 });
-
 
 const config = getConfig();
 const exports = await getAssemblyExports(config.mainAssemblyName);
 
 console.log(exports)
 
-const text = exports.MyClass.Greeting();
-console.log(text);
-
-document.getElementById('out').innerHTML = text;
 await dotnet.run();

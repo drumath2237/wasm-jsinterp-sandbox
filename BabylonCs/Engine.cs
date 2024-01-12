@@ -34,8 +34,14 @@ internal static partial class EngineImpl
 {
     [JSImport("engine/createEngine", "BabylonCs")]
     [return: JSMarshalAs<JSType.Any>]
-    public static partial object CreateEngine([JSMarshalAs<JSType.Any>] object renderCanvas, bool antialias);
+    public static partial object CreateEngine(
+        [JSMarshalAs<JSType.Any>] object renderCanvas,
+        bool antialias
+    );
 
     [JSImport("engine/runRenderLoop", "BabylonCs")]
-    public static partial void RunRenderLoop([JSMarshalAs<JSType.Any>] object engine, Action callback);
+    public static partial void RunRenderLoop(
+        [JSMarshalAs<JSType.Any>] object engine,
+        [JSMarshalAs<JSType.Function>] Action callback
+    );
 }
