@@ -1,13 +1,13 @@
 {
-    "profiles": {
-      "wasm-jsinterp-sandbox": {
-        "commandName": "Project",
-        "launchBrowser": true,
-        "environmentVariables": {
-          "ASPNETCORE_ENVIRONMENT": "Development"
-        },
-        "applicationUrl": "https://localhost:7283;http://localhost:5186",
-        "inspectUri": "{wsProtocol}://{url.hostname}:{url.port}/debug?browser={browserInspectUri}"
-      }
+  "profiles": {
+    "wasm-jsinterp-sandbox": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:7283;http://localhost:5186",
+      "inspectUri": "{wsProtocol}://{url.hostname}:{url.port}/debug?browser={browserInspectUri}"
     }
+  }
 }
