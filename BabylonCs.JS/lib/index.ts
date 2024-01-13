@@ -1,7 +1,7 @@
 export class Person {
-  public name: string;
-  public age: number;
-  public isChild: boolean;
+  public readonly name: string;
+  public readonly age: number;
+  public readonly isChild: boolean;
 
   public constructor(name: string, age: number, isChild: boolean) {
     this.name = name;

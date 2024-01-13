@@ -1,5 +1,4 @@
 ﻿#nullable enable
-using System;
 using System.Runtime.InteropServices.JavaScript;
 
 public record Person(string name, int age, bool isChild);
