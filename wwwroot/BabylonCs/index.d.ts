@@ -16,3 +16,8 @@ export declare const getPerson: (name: string) => Person;
  * @returns print string
  */
 export declare const printPerson: (person: Person) => string;
+/**
+ * log message to p element
+ * @param msg log message
+ */
+export declare const logInfo: (msg: string) => void;

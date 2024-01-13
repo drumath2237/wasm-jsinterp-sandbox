@@ -24,3 +24,16 @@ export const getPerson = (name: string) => new Person(name, 18, false);
  */
 export const printPerson = (person: Person): string =>
   `{name: ${person.name}, age: ${person.age}, child: ${person.isChild}}`;
+
+/**
+ * log message to p element
+ * @param msg log message
+ */
+export const logInfo = (msg: string): void => {
+  const logElm = document.querySelector<HTMLParagraphElement>("p#msg");
+  if (!logElm) {
+    return;
+  }
+
+  logElm.textContent = msg;
+};

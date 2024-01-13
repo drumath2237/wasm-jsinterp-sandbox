@@ -1,17 +1,21 @@
-var t = Object.defineProperty;
-var h = (e, s, i) => s in e ? t(e, s, { enumerable: !0, configurable: !0, writable: !0, value: i }) : e[s] = i;
-var a = (e, s, i) => (h(e, typeof s != "symbol" ? s + "" : s, i), i);
+var i = Object.defineProperty;
+var a = (e, t, n) => t in e ? i(e, t, { enumerable: !0, configurable: !0, writable: !0, value: n }) : e[t] = n;
+var s = (e, t, n) => (a(e, typeof t != "symbol" ? t + "" : t, n), n);
 class c {
-  constructor(s, i, n) {
-    a(this, "name");
-    a(this, "age");
-    a(this, "isChild");
-    this.name = s, this.age = i, this.isChild = n;
+  constructor(t, n, o) {
+    s(this, "name");
+    s(this, "age");
+    s(this, "isChild");
+    this.name = t, this.age = n, this.isChild = o;
   }
 }
-const o = (e) => new c(e, 18, !1), g = (e) => `{name: ${e.name}, age: ${e.age}, child: ${e.isChild}}`;
+const r = (e) => new c(e, 18, !1), g = (e) => `{name: ${e.name}, age: ${e.age}, child: ${e.isChild}}`, h = (e) => {
+  const t = document.querySelector("p#msg");
+  t && (t.textContent = e);
+};
 export {
   c as Person,
-  o as getPerson,
+  r as getPerson,
+  h as logInfo,
   g as printPerson
 };

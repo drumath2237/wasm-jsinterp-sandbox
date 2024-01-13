@@ -12,6 +12,9 @@ public partial class Util
     [JSImport("util.printPerson", "main.js")]
     public static partial string PrintPerson(JSObject person);
 
+    [JSImport("util.logInfo", "main.js")]
+    public static partial void LogInfo(string msg);
+
     public static Person? TryGetPerson(string name, int age, bool isChild)
     {
         var personJsObj = GetPerson(name);
