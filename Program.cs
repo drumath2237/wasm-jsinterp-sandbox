@@ -1,4 +1,7 @@
 using System;
 
-var person = Util.TryGetPerson("Alice", 18, false);
-Console.WriteLine(person);
+var jsPerson = Util.GetPerson("Alice");
+Console.WriteLine(jsPerson);
+
+var prints = Util.PrintPerson(jsPerson);
+Console.WriteLine(prints);

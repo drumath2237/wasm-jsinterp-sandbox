@@ -1,8 +1,5 @@
-// Licensed to the .NET Foundation under one or more agreements.
-// The .NET Foundation licenses this file to you under the MIT license.
-
 import { dotnet } from "./_framework/dotnet.js";
-import { Person } from "./person.js";
+import { getPerson, printPerson } from "./BabylonCs/index.js";
 
 const { setModuleImports, getAssemblyExports, getConfig } = await dotnet
   .withDiagnosticTracing(false)
@@ -11,7 +8,8 @@ const { setModuleImports, getAssemblyExports, getConfig } = await dotnet
 
 setModuleImports("main.js", {
   util: {
-    getPerson: (name, age, isChild) => new Person(name, age, isChild),
+    getPerson: (name) => getPerson(name),
+    printPerson: (person) => printPerson(person),
   },
 });
 
