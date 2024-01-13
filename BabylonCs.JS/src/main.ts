@@ -1,5 +1,5 @@
 import "./style.css";
-import { getPerson } from "../lib";
+import { getPerson, printPerson } from "../lib";
 
 const main = () => {
   const paragraph = document.querySelector<HTMLParagraphElement>("p#msg");
@@ -8,7 +8,7 @@ const main = () => {
   }
 
   const person = getPerson("Alice");
-  paragraph.textContent = person.name;
+  paragraph.textContent = printPerson(person);
   console.log(person);
 };
 

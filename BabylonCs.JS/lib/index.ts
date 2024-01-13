@@ -11,3 +11,6 @@ export class Person {
 }
 
 export const getPerson = (name: string) => new Person(name, 18, false);
+
+export const printPerson = (person: Person): string =>
+  `{name: ${person.name}, age: ${person.age}, child: ${person.isChild}}`;
