@@ -33,6 +33,7 @@
     "prepare": "pnpm build"
   },
   "devDependencies": {
+    "@babylonjs/core": "^6.38.1",
     "@types/node": "^20.10.5",
     "rollup-plugin-copy": "^3.5.0",
     "typescript": "^5.3.3",
