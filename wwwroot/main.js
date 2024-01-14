@@ -13,9 +13,9 @@ const { setModuleImports, getAssemblyExports, getConfig } = await dotnet
 
 setModuleImports("main.js", {
   util: {
-    getPerson: (name) => getPerson(name),
-    printPerson: (person) => printPerson(person),
-    logInfo: (msg) => logInfo(msg),
+    getPerson,
+    printPerson,
+    logInfo,
     changeName: (person, name) => changePersonName(person, name),
   },
 });
