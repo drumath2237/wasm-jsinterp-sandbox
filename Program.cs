@@ -1,4 +1,10 @@
-var jsPerson = Util.GetPerson("Alice");
-var prints = Util.PrintPerson(jsPerson);
+using System;
+using static Util;
 
-Util.LogInfo(prints);
+var jsPerson = GetPerson("Alice");
+LogInfo(PrintPerson(jsPerson));
+
+ChangeName(jsPerson, "Bob");
+LogInfo(PrintPerson(jsPerson));
+
+Console.WriteLine(jsPerson.GetPropertyAsString("name"));

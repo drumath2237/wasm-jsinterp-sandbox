@@ -14,6 +14,9 @@ public partial class Util
     [JSImport("util.logInfo", "main.js")]
     public static partial void LogInfo(string msg);
 
+    [JSImport("util.changeName", "main.js")]
+    public static partial void ChangeName(JSObject person, string name);
+
     public static Person? TryGetPerson(string name, int age, bool isChild)
     {
         var personJsObj = GetPerson(name);
