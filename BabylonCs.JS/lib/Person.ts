@@ -1,7 +1,7 @@
 export class Person {
-  public readonly name: string;
-  public readonly age: number;
-  public readonly isChild: boolean;
+  public name: string;
+  public age: number;
+  public isChild: boolean;
 
   public constructor(name: string, age: number, isChild: boolean) {
     this.name = name;
@@ -24,3 +24,7 @@ export const getPerson = (name: string) => new Person(name, 18, false);
  */
 export const printPerson = (person: Person): string =>
   `{name: ${person.name}, age: ${person.age}, child: ${person.isChild}}`;
+
+export const changePersonName = (person: Person, name: string): void => {
+  person.name = name;
+};

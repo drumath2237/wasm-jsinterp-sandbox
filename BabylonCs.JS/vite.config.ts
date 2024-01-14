@@ -16,6 +16,7 @@ export default defineConfig({
       plugins: [
         copy({
           targets: [{ src: "dist/*.{js,ts}", dest: "../wwwroot/BabylonCs" }],
+          verbose: true,
         }),
       ],
     },

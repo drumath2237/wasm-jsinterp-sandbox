@@ -1,5 +1,10 @@
 import { dotnet } from "./_framework/dotnet.js";
-import { getPerson, printPerson, logInfo } from "./BabylonCs/index.js";
+import {
+  getPerson,
+  printPerson,
+  logInfo,
+  changePersonName,
+} from "./BabylonCs/index.js";
 
 const { setModuleImports, getAssemblyExports, getConfig } = await dotnet
   .withDiagnosticTracing(false)
@@ -11,6 +16,7 @@ setModuleImports("main.js", {
     getPerson: (name) => getPerson(name),
     printPerson: (person) => printPerson(person),
     logInfo: (msg) => logInfo(msg),
+    changeName: (person, name) => changePersonName(person, name),
   },
 });
 
