@@ -5,16 +5,16 @@ public record Person(string name, int age, bool isChild);
 
 public partial class Util
 {
-    [JSImport("util.getPerson", "main.js")]
+    [JSImport("person.getPerson", "babylon.cs")]
     public static partial JSObject GetPerson(string name);
 
-    [JSImport("util.printPerson", "main.js")]
+    [JSImport("person.printPerson", "babylon.cs")]
     public static partial string PrintPerson(JSObject person);
 
-    [JSImport("util.logInfo", "main.js")]
+    [JSImport("utils.logInfo", "babylon.cs")]
     public static partial void LogInfo(string msg);
 
-    [JSImport("util.changeName", "main.js")]
+    [JSImport("person.changeName", "babylon.cs")]
     public static partial void ChangeName(JSObject person, string name);
 
     public static Person? TryGetPerson(string name, int age, bool isChild)

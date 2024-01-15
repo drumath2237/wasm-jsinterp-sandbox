@@ -1,24 +1,12 @@
 import { dotnet } from "./_framework/dotnet.js";
-import {
-  getPerson,
-  printPerson,
-  logInfo,
-  changePersonName,
-} from "./BabylonCs/index.js";
+import { setupBabylonCs } from "./BabylonCs/index.js";
 
 const { setModuleImports, getAssemblyExports, getConfig } = await dotnet
   .withDiagnosticTracing(false)
   .withApplicationArgumentsFromQuery()
   .create();
 
-setModuleImports("main.js", {
-  util: {
-    getPerson,
-    printPerson,
-    logInfo,
-    changeName: (person, name) => changePersonName(person, name),
-  },
-});
+setupBabylonCs(setModuleImports);
 
 const config = getConfig();
 const exports = await getAssemblyExports(config.mainAssemblyName);

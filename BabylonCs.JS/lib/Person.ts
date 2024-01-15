@@ -28,3 +28,9 @@ export const printPerson = (person: Person): string =>
 export const changePersonName = (person: Person, name: string): void => {
   person.name = name;
 };
+
+export const personImports = {
+  getPerson,
+  printPerson,
+  changePersonName,
+};

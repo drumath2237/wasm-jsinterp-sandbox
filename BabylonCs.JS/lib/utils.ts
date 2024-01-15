@@ -10,3 +10,5 @@ export const logInfo = (msg: string): void => {
 
   logElm.textContent = msg;
 };
+
+export const utilImpoers = { logInfo };
