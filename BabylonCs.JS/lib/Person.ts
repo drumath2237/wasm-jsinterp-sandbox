@@ -25,12 +25,12 @@ export const getPerson = (name: string) => new Person(name, 18, false);
 export const printPerson = (person: Person): string =>
   `{name: ${person.name}, age: ${person.age}, child: ${person.isChild}}`;
 
-export const changePersonName = (person: Person, name: string): void => {
+export const changeName = (person: Person, name: string): void => {
   person.name = name;
 };
 
 export const personImports = {
   getPerson,
   printPerson,
-  changePersonName,
+  changeName,
 };

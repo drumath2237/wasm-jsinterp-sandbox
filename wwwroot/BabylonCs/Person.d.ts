@@ -16,9 +16,9 @@ export declare const getPerson: (name: string) => Person;
  * @returns print string
  */
 export declare const printPerson: (person: Person) => string;
-export declare const changePersonName: (person: Person, name: string) => void;
+export declare const changeName: (person: Person, name: string) => void;
 export declare const personImports: {
     getPerson: (name: string) => Person;
     printPerson: (person: Person) => string;
-    changePersonName: (person: Person, name: string) => void;
+    changeName: (person: Person, name: string) => void;
 };
