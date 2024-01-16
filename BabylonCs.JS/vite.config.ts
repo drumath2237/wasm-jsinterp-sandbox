@@ -1,10 +1,17 @@
-import { defineConfig } from "vite";
+import { PluginOption, defineConfig } from "vite";
 import dts from "vite-plugin-dts";
 import { resolve } from "path";
 import copy from "rollup-plugin-copy";
 
+const copyBuildsAfterBuildPlugin: PluginOption = {
+  name: "copyBuildsAfterBuildPlugin",
+  closeBundle: async (): Promise<void> => {
+    console.log("after build");
+  },
+};
+
 export default defineConfig({
-  plugins: [dts()],
+  plugins: [dts(), copyBuildsAfterBuildPlugin],
   build: {
     lib: {
       entry: resolve(__dirname, "./lib/index.ts"),
