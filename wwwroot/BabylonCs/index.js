@@ -9,12 +9,12 @@ class i {
     this.name = n, this.age = t, this.isChild = o;
   }
 }
-const r = (s) => new i(s, 18, !1), l = (s) => `{name: ${s.name}, age: ${s.age}, child: ${s.isChild}}`, m = (s, n) => {
+const l = (s) => new i(s, 18, !1), r = (s) => `{name: ${s.name}, age: ${s.age}, child: ${s.isChild}}`, m = (s, n) => {
   s.name = n;
 }, g = {
-  getPerson: r,
-  printPerson: l,
-  changePersonName: m
+  getPerson: l,
+  printPerson: r,
+  changeName: m
 }, h = (s) => {
   const n = document.querySelector("p#msg");
   n && (n.textContent = s);
@@ -24,11 +24,11 @@ const r = (s) => new i(s, 18, !1), l = (s) => `{name: ${s.name}, age: ${s.age}, 
 }, C = (s) => s("babylon.cs", p);
 export {
   i as Person,
-  m as changePersonName,
-  r as getPerson,
+  m as changeName,
+  l as getPerson,
   h as logInfo,
   g as personImports,
-  l as printPerson,
+  r as printPerson,
   C as setupBabylonCs,
   u as utilImpoers
 };
