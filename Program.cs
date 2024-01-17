@@ -1,10 +1,10 @@
 using System;
 using static Util;
 
-var jsPerson = GetPerson("Alice");
-LogInfo(PrintPerson(jsPerson));
+var person = new Person("Alice");
+LogInfo(person.Print());
 
-ChangeName(jsPerson, "Bob");
-LogInfo(PrintPerson(jsPerson));
+person.ChangeName("Bob");
+LogInfo(person.Print());
 
-Console.WriteLine(jsPerson.GetPropertyAsString("name"));
+Console.WriteLine(person.Name);
